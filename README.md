@@ -1,38 +1,19 @@
-# Welcome to Remix!
+Took the time to test drive Remix which I have been wanting to for a while.
 
-- [Remix Docs](https://remix.run/docs)
+For the styling used Tailwindscss as it's unmatched when it comes to putting something together quickly and
+iterating on it.
 
-## Development
+As it's a demo decided to focus on what I thought mattered the most like connecting to metamask, fetching and
+showing the auctions and giving it a cool design.
+
+It was a bunch of markup, styles and some typescript.
+
+Deployed on netlify at: https://eth-auction.netlify.app/
+
+### Development
 
 From your terminal:
 
 ```sh
-npm run dev
+yarn && yarn dev
 ```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`

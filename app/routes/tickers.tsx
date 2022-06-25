@@ -1,23 +1,15 @@
 import { useLoaderData } from '@remix-run/react';
 import type { OperationResult } from '@urql/core';
 import { gql, createClient } from '@urql/core';
-import web3 from '../web3.server';
+import { ethers } from 'ethers';
 
 const client = createClient({
   url: 'https://api.thegraph.com/subgraphs/name/vince0656/brand-central',
 });
 
 export const loader = async (): Promise<OperationResult<TickersResponse>> => {
-  const result = await client
-    .query<TickersResponse>(TickersQuery)
-    .toPromise()
-    .then((result) => {
-      result.data?.tickers.forEach((ticker) => {
-        ticker.shbBid = web3.utils.fromWei(ticker.shbBid);
-      });
+  const result = await client.query<TickersResponse>(TickersQuery).toPromise();
 
-      return result;
-    });
   return result;
 };
 
@@ -82,7 +74,7 @@ export default function Tickers() {
               <div className="flex justify-between">
                 <span className="uppercase text-2xl font-bold">{ticker.id}</span>
                 <div>
-                  <span className="text-lg font-bold">{ticker.shbBid}</span>
+                  <span className="text-lg font-bold">{ethers.utils.formatEther(ticker.shbBid)}</span>
                   <span className="text-xs font-thing"> SHB</span>
                 </div>
               </div>

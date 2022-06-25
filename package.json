@@ -15,14 +15,14 @@
     "@twind/preset-autoprefix": "1.0.0-next.38",
     "@twind/preset-tailwind": "1.0.0-next.38",
     "@twind/with-remix": "1.0.0-next.38",
-    "cross-env": "^7.0.3",
     "@urql/core": "^2.5.0",
+    "cross-env": "^7.0.3",
     "ethers": "^5.6.9",
     "graphql": "^16.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "twind": "1.0.0-next.38",
-    "web3": "^1.7.4"
+    "remix": "^1.6.1",
+    "twind": "1.0.0-next.38"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.6.1",
