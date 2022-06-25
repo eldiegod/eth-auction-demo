@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@remix-run/react';
 
 export const Loader = () => {};
 

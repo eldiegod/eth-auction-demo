@@ -3,8 +3,8 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev",
-    "start": "remix-serve build"
+    "dev": "cross-env NODE_ENV=development netlify dev",
+    "start": "cross-env NODE_ENV=production netlify dev"
   },
   "dependencies": {
     "@netlify/functions": "^1.0.0",
@@ -15,6 +15,7 @@
     "@twind/preset-autoprefix": "1.0.0-next.38",
     "@twind/preset-tailwind": "1.0.0-next.38",
     "@twind/with-remix": "1.0.0-next.38",
+    "cross-env": "^7.0.3",
     "@urql/core": "^2.5.0",
     "ethers": "^5.6.9",
     "graphql": "^16.5.0",
